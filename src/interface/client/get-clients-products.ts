@@ -17,7 +17,7 @@ export interface GetClientsProductsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    products: Product[];
+    products: { product: Product[] };
 }
 
 export interface Product {
@@ -60,11 +60,11 @@ export interface Product {
     bwlimit: number;
     lastupdate: string;
     customfields: {
-        customfield: []
-    },
+        customfield: [];
+    };
     configoptions: {
-        configoption: ConfigOption[]
-    }
+        configoption: ConfigOption[];
+    };
 }
 
 export interface ConfigOption {

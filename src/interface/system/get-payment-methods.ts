@@ -1,14 +1,12 @@
-export interface GetPaymentMethodsRequest {
-
-}
+export interface GetPaymentMethodsRequest {}
 
 export interface GetPaymentMethodsResponse {
-  result: string;
-  totalresults: number;
-  paymentmethods: PaymentMethod[];
+    result: string;
+    totalresults: number;
+    paymentmethods: { paymentmethod: PaymentMethod[] };
 }
 
 export interface PaymentMethod {
-  module: string;
-  displayname: string;
+    module: string;
+    displayname: string;
 }

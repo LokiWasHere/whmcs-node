@@ -1,11 +1,9 @@
-export interface GetClientGroupsRequest {
-
-}
+export interface GetClientGroupsRequest {}
 
 export interface GetClientGroupsResponse {
     result: string;
     totalresults: number;
-    groups: Group[];
+    groups: { group: Group[] };
 }
 
 export interface Group {

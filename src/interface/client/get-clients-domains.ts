@@ -13,7 +13,7 @@ export interface GetClientsDomainsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    domains: Domain[];
+    domains: { domain: Domain[] } | "";
 }
 
 export interface Domain {

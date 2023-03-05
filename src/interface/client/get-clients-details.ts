@@ -7,12 +7,6 @@ export interface GetClientsDetailsRequest {
 export interface GetClientsDetailsResponse {
     result: string;
     client: Client;
-    stats: Stats;
-}
-
-export interface Client {
-    client_id: number;
-    owner_user_id: number;
     userid: number;
     id: number;
     uuid: string;
@@ -29,15 +23,16 @@ export interface Client {
     postcode: string;
     countrycode: string;
     country: string;
-    phonenumber: number;
+    phonenumber: string;
     tax_id: string;
+    password: string;
     email_preferences: {
-        general: number;
-        invoice: number;
-        support: number;
-        product: number;
-        domain: number;
-        affiliate: number;
+        general: string;
+        invoice: string;
+        support: string;
+        product: string;
+        domain: string;
+        affiliate: string;
     };
     statecode: string;
     countryname: string;
@@ -46,11 +41,17 @@ export interface Client {
     telephoneNumber: string;
     billingcid: number;
     notes: string;
+    twofaenabled: boolean;
     currency: number;
     defaultgateway: string;
+    cctype: null;
+    cclastfour: null;
+    gatewayid: null;
+    securityqid: number;
+    securityqans: string;
     groupid: number;
     status: string;
-    credit: number;
+    credit: string;
     taxexempt: boolean;
     latefeeoveride: boolean;
     overideduenotices: boolean;
@@ -64,57 +65,69 @@ export interface Client {
     language: string;
     isOptedInToMarketingEmails: boolean;
     lastlogin: string;
+    customfields: {
+        id: number;
+        value: string;
+    }[];
     currency_code: string;
-    users: User[]
 }
 
-export interface User {
+export interface Client {
+    userid: number;
     id: number;
-    name: string;
+    uuid: string;
+    firstname: string;
+    lastname: string;
+    fullname: string;
+    companyname: string;
     email: string;
-    is_owner: boolean;
-}
-
-export interface Stats {
-    numdueinvoices: number 
-    dueinvoicesbalance: string
-    incredit: boolean
-    creditbalance: string 
-    grossRevenue: string
-    expenses: string
-    income: string
-    numoverdueinvoices: number 
-    overdueinvoicesbalance: string
-    numDraftInvoices: number
-    draftInvoicesBalance: string
-    numunpaidinvoices: number 
-    unpaidinvoicesamount: string
-    numpaidinvoices: number
-    paidinvoicesamount: string
-    numcancelledinvoices: number
-    cancelledinvoicesamount: string
-    numrefundedinvoices: number
-    refundedinvoicesamount: string
-    numcollectionsinvoices: number
-    collectionsinvoicesamount: string
-    numpaymentpendinginvoices: number
-    paymentpendinginvoicesamount: string
-    productsnumactivehosting: number
-    productsnumhosting: number
-    productsnumactivereseller: number
-    productsnumreseller: number
-    productsnumactiveservers: number
-    productsnumservers: number
-    productsnumactiveother: number
-    productsnumother: number
-    productsnumactive: number
-    productsnumtotal: number
-    numactivedomains: number
-    numdomains: number
-    numacceptedquotes: number
-    numquotes: number
-    numtickets: number
-    numactivetickets: number
-    numaffiliatesignups: number
-    isAffiliate: boolean
+    address1: string;
+    address2: string;
+    city: string;
+    fullstate: string;
+    state: string;
+    postcode: string;
+    countrycode: string;
+    country: string;
+    phonenumber: string;
+    tax_id: string;
+    password: string;
+    email_preferences: {
+        general: string;
+        invoice: string;
+        support: string;
+        product: string;
+        domain: string;
+        affiliate: string;
+    };
+    statecode: string;
+    countryname: string;
+    phonecc: number;
+    phonenumberformatted: string;
+    telephoneNumber: string;
+    billingcid: number;
+    notes: string;
+    twofaenabled: boolean;
+    currency: number;
+    defaultgateway: string;
+    securityqid: number;
+    securityqans: string;
+    groupid: number;
+    status: string;
+    credit: string;
+    taxexempt: boolean;
+    latefeeoveride: boolean;
+    overideduenotices: boolean;
+    separateinvoices: boolean;
+    disableautocc: boolean;
+    emailoptout: boolean;
+    marketing_emails_opt_in: boolean;
+    overrideautoclose: boolean;
+    allowSingleSignOn: number;
+    email_verified: boolean;
+    language: string;
+    isOptedInToMarketingEmails: boolean;
+    lastlogin: string;
+    customfields: { id: number; value: string }[];
+    currency_code: string;
 }

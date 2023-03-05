@@ -20,7 +20,7 @@ export interface GetContactsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    contacts: Contact[];
+    contacts: { contact: Contact[] };
 }
 
 export interface Contact {

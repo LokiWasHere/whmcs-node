@@ -1,36 +1,36 @@
 {
-  "name": "whmcs-node",
-  "version": "1.0.9",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shockbyte/whmcs-node.git"
-  },
-  "keywords": [],
-  "author": "Shockbyte",
-  "contributors": [
-    {
-      "name": "James Hawkins",
-      "email": "james@shockbyte.com",
-      "url": "https://github.com/jameshawkinss"
+    "name": "@fahdlaabi/whmcs-node",
+    "version": "0.0.1",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
     },
-    {
-      "name": "Niek van Gogh",
-      "email": "niek@shockbyte.com",
-      "url": "https://github.com/niekvangogh"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shockbyte/whmcs-node.git"
+    },
+    "keywords": [],
+    "author": "Shockbyte",
+    "contributors": [
+        {
+            "name": "James Hawkins",
+            "email": "james@shockbyte.com",
+            "url": "https://github.com/jameshawkinss"
+        },
+        {
+            "name": "Niek van Gogh",
+            "email": "niek@shockbyte.com",
+            "url": "https://github.com/niekvangogh"
+        }
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/shockbyte/whmcs-node/issues"
+    },
+    "homepage": "https://github.com/shockbyte/whmcs-node#readme",
+    "dependencies": {
+        "got": "^11.8.0"
     }
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shockbyte/whmcs-node/issues"
-  },
-  "homepage": "https://github.com/shockbyte/whmcs-node#readme",
-  "dependencies": {
-    "got": "^11.8.0"
-  }
 }

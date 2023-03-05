@@ -9,7 +9,7 @@ export interface GetClientsAddonsResponse {
     totalresults: number;
     serviceid: number;
     clientid: number;
-    addons: Addon[]
+    addons: { addon: Addon[] };
 }
 
 export interface Addon {

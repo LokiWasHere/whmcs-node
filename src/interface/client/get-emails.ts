@@ -11,7 +11,7 @@ export interface GetEmailsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    emails: Email[];
+    emails: { email: Email[] };
 }
 
 export interface Email {
@@ -31,5 +31,5 @@ export interface Email {
     retry_count: number;
     created_at: string;
     updated_at: string;
-    campaign_id: number;    
+    campaign_id: number;
 }
