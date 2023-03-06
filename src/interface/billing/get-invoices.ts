@@ -12,26 +12,26 @@ export interface GetInvoicesResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    invoices: { invoice: Invoices[] };
+    invoices: { invoice: Invoice[] };
 }
 
-export interface Invoices {
+export interface Invoice {
     id: number;
     userid: number;
     firstname: string;
     lastname: string;
     companyname: string;
-    invoicenum: number;
-    date: Date;
-    duedate: Date;
-    datepaid: Date;
-    subtotal: number;
-    credit: number;
-    tax: number;
-    tax2: number;
-    total: number;
-    taxrate: number;
-    taxrate2: number;
+    invoicenum: string;
+    date: string;
+    duedate: string;
+    datepaid: string;
+    subtotal: string;
+    credit: string;
+    tax: string;
+    tax2: string;
+    total: string;
+    taxrate: string;
+    taxrate2: string;
     status: string;
     paymentmethod: string;
     notes: string;
