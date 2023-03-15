@@ -15,7 +15,7 @@ export interface AddClientRequest {
     password2?: string;
     securityqid?: number;
     securityqans?: string;
-    currency?: number;
+    currency?: string;
     groupid?: number;
     customfields?: string;
     language?: string;
