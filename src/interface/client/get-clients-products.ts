@@ -37,8 +37,8 @@ export interface Product {
     serverip: string;
     serverhostname: string;
     suspensionreason: string;
-    firstpaymentamount: number;
-    recurringamount: number;
+    firstpaymentamount: string;
+    recurringamount: string;
     paymentmethod: string;
     paymentmethodname: string;
     billingcycle: string;
