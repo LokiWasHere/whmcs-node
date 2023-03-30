@@ -1,7 +1,7 @@
 export interface AddOrderRequest {
     clientid: number;
     paymentmethod: string;
-    pid?: number[];
+    pid?: number | number[];
     domain?: string[];
     billingcycle?: string[];
     domaintype?: string[];
