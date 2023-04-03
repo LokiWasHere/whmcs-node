@@ -14,13 +14,13 @@ export interface GetTicketsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    tickets: {
+    tickets?: {
         ticket: Ticket[];
     };
-    requestor_name: string;
-    requestor_type: string;
-    requestor_email: string;
-    owner_name: string;
+    requestor_name?: string;
+    requestor_type?: string;
+    requestor_email?: string;
+    owner_name?: string;
 }
 
 export interface Ticket {
