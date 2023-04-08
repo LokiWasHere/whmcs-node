@@ -4,33 +4,51 @@ export interface GetInvoiceRequest {
 
 export interface GetInvoiceResponse {
     result: string;
-    invoiceid: number;
+    invoiceid: string;
     invoicenum: string;
-    userid: number;
+    userid: string;
     date: string;
     duedate: string;
     datepaid: string;
-    subtotal: number;
-    credit: number;
-    tax: number;
-    tax2: number;
-    total: number;
-    balance: number;
-    taxrate: number;
-    taxrate2: number;
+    subtotal: string;
+    credit: string;
+    tax: string;
+    tax2: string;
+    total: string;
+    balance: string;
+    taxrate: string;
+    taxrate2: string;
     status: string;
-    paymentmethod: string;
+    paymethodid: string | null;
     notes: string;
     ccgateway: boolean;
     items: { item: Item[] };
-    transactions: string[] | string;
+    transactions: {
+        transaction: Transaction[];
+    };
 }
 
 export interface Item {
-    id: number;
+    id: string;
     type: string;
-    relid: number;
-    description: number;
-    amount: number;
-    taxed: number;
+    relid: string;
+    description: string;
+    amount: string;
+    taxed: string;
+}
+
+export interface Transaction {
+    id: number;
+    userid: number;
+    currency: number;
+    gateway: string;
+    date: string;
+    description: string;
+    amountin: string;
+    fees: string;
+    amountout: string;
+    rate: string;
+    transid: string;
+    invoiceid: number;
+    refundid: number;
 }
