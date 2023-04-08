@@ -9,8 +9,8 @@ export interface GetSupportDepartmentsResponse {
 }
 
 export interface Department {
-    id: number;
+    id: string;
     name: string;
-    awaitingreply: number;
-    opentickets: number;
+    awaitingreply: string;
+    opentickets: string;
 }
