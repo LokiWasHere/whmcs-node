@@ -12,7 +12,7 @@ export abstract class BaseModule {
         options.responsetype = "json";
 
         return new Promise(async (resolve, reject) => {
-            const res = await got(this.options.apiUrl, {
+            const res = await got(this.options.apiUrl + "/includes/api.php", {
                 method: "post",
                 form: options,
             });
