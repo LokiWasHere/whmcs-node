@@ -11,7 +11,7 @@ export interface GetOrdersResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    orders: { order: Order[] };
+    orders?: { order: Order[] };
 }
 
 export interface Order {
