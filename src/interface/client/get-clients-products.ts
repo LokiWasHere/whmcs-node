@@ -60,11 +60,18 @@ export interface Product {
     bwlimit: number;
     lastupdate: string;
     customfields: {
-        customfield: [];
+        customfield: CustomField[];
     };
     configoptions: {
         configoption: ConfigOption[];
     };
+}
+
+export interface CustomField {
+    id: number;
+    name: string;
+    translated_name: string;
+    value: string;
 }
 
 export interface ConfigOption {
