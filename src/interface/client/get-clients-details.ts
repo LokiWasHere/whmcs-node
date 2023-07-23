@@ -70,6 +70,49 @@ export interface GetClientsDetailsResponse {
         value: string;
     }[];
     currency_code: string;
+    stats: {
+        numdueinvoices: number;
+        dueinvoicesbalance: string;
+        incredit: boolean;
+        creditbalance: string;
+        grossRevenue: string;
+        expenses: string;
+        income: string;
+        numoverdueinvoices: number;
+        overdueinvoicesbalance: string;
+        numDraftInvoices: number;
+        draftInvoicesBalance: string;
+        numunpaidinvoices: number;
+        unpaidinvoicesamount: string;
+        numpaidinvoices: number;
+        paidinvoicesamount: string;
+        numcancelledinvoices: number;
+        cancelledinvoicesamount: string;
+        numrefundedinvoices: number;
+        refundedinvoicesamount: string;
+        numcollectionsinvoices: number;
+        collectionsinvoicesamount: string;
+        numpaymentpendinginvoices: number;
+        paymentpendinginvoicesamount: string;
+        productsnumactivehosting: number;
+        productsnumhosting: number;
+        productsnumactivereseller: number;
+        productsnumreseller: number;
+        productsnumactiveservers: number;
+        productsnumservers: number;
+        productsnumactiveother: number;
+        productsnumother: number;
+        productsnumactive: number;
+        productsnumtotal: number;
+        numactivedomains: number;
+        numdomains: number;
+        numacceptedquotes: number;
+        numquotes: number;
+        numtickets: number;
+        numactivetickets: number;
+        numaffiliatesignups: number;
+        isAffiliate: boolean;
+    };
 }
 
 export interface Client {
