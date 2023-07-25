@@ -13,7 +13,7 @@ export interface OpenTicketRequest {
     admin?: boolean;
     markdown?: boolean;
     customfields?: string;
-    attachments?: any[];
+    attachments?: string;
 }
 
 export interface OpenTicketResponse {
