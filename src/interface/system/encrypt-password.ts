@@ -1,7 +1,8 @@
 export interface EncryptPasswordRequest {
-  password2: string;
+    password2: string;
 }
 
 export interface EncryptPasswordResponse {
-  result: string;
+    result: string;
+    password: string;
 }
