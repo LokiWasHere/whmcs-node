@@ -31,6 +31,7 @@ export interface UpdateClientRequest {
     separateinvoices?: boolean;
     disableautocc?: boolean;
     overrideautoclose?: boolean;
+    password2?: string;
 }
 
 export interface UpdateClientResponse {
@@ -44,5 +45,5 @@ export interface EmailPreference {
     domain?: boolean;
     invoice?: boolean;
     support?: boolean;
-    affiliate?: boolean
+    affiliate?: boolean;
 }
