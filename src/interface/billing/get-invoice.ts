@@ -19,7 +19,7 @@ export interface GetInvoiceResponse {
     taxrate: string;
     taxrate2: string;
     status: string;
-    paymethodid: string | null;
+    paymentmethod: string | null;
     notes: string;
     ccgateway: boolean;
     items: { item: Item[] };

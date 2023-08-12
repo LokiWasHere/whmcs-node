@@ -12,7 +12,7 @@ export interface GetInvoicesResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    invoices: { invoice: Invoice[] };
+    invoices: { invoice?: Invoice[] };
 }
 
 export interface Invoice {
