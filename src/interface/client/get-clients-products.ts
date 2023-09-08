@@ -21,10 +21,10 @@ export interface GetClientsProductsResponse {
 }
 
 export interface Product {
-    id: number;
+    id: string;
     clientid: number;
     orderid: number;
-    pid: number;
+    pid: string;
     regdate: string;
     name: string;
     translated_name: string;
