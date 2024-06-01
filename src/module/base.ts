@@ -10,22 +10,16 @@ export abstract class BaseModule {
         methodName: string,
         options?: Record<string, any>
     ): Promise<any> {
-        const form = new FormData();
-
-        form.append("identifier", this.options.identifier);
-        form.append("secret", this.options.secret);
-        form.append("accesskey", this.options.accesskey);
-        form.append("action", methodName);
-        form.append("responsetype", "json");
-
-        Object.entries(options).forEach(([value, index]) => {
-            form.append(index, value);
-        });
+        options.identifier = this.options.identifier;
+        options.secret = this.options.secret;
+        options.accesskey = this.options.accesskey;
+        options.action = methodName;
+        options.responsetype = "json";
 
         return new Promise(async (resolve, reject) => {
             const res = await got(this.options.apiUrl + "/includes/api.php", {
                 method: "post",
-                form,
+                form: options,
             });
 
             const data = JSON.parse(res.body);
