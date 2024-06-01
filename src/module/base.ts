@@ -1,8 +1,6 @@
 import got from "got";
 import { WhmcsSetupOptions } from "../interface/whmcs.setup.options";
 
-import FormData = require("form-data");
-
 export abstract class BaseModule {
     constructor(private readonly options: WhmcsSetupOptions) {}
 
