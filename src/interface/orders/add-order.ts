@@ -13,8 +13,8 @@ export interface AddOrderRequest {
     nameserver3?: string;
     nameserver4?: string;
     nameserver5?: string;
-    customfields?: string[];
-    configoptions?: string[];
+    customfields?: string | string[];
+    configoptions?: string | string[];
     priceoverride?: number[];
     promocode?: string;
     promooverride?: boolean;
