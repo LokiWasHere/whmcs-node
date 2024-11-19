@@ -4,6 +4,7 @@
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "type": "module",
     "scripts": {
         "build": "npx tsc",
         "publish-npm": "npm run build && npm version patch && npm publish"
