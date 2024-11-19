@@ -1,10 +1,9 @@
 {
     "name": "@fahdlaabi12/whmcs-node",
-    "version": "0.0.53",
+    "version": "0.0.51",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "build": "npx tsc",
         "publish-npm": "npm run build && npm version patch && npm publish"
@@ -33,10 +32,6 @@
     },
     "homepage": "https://github.com/shockbyte/whmcs-node#readme",
     "dependencies": {
-        "node-fetch": "^3.2.8",
-        "url": "^0.11.4"
-    },
-    "devDependencies": {
-        "@types/node": "^22.9.1"
+        "got": "^11.8.0"
     }
 }
