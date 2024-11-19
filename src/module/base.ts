@@ -1,4 +1,6 @@
-import got from "got";
+import fetch from "node-fetch";
+import { URLSearchParams, URL } from "url";
+
 import { WhmcsSetupOptions } from "../interface/whmcs.setup.options";
 
 export abstract class BaseModule {
@@ -15,15 +17,29 @@ export abstract class BaseModule {
         options.responsetype = "json";
 
         return new Promise(async (resolve, reject) => {
-            const res = await got(this.options.apiUrl + "/includes/api.php", {
-                method: "post",
-                form: options,
-            });
+            try {
+                const res = await fetch(
+                    this.options.apiUrl + "/includes/api.php",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: new URLSearchParams(
+                            options as Record<string, any>
+                        ),
+                    }
+                );
 
-            const data = JSON.parse(res.body);
+                const data = (await res.json()) as {
+                    result: "success" | "error";
+                };
 
-            if (data.result != "success") return reject(data);
-            resolve(data);
+                if (data.result != "success") return reject(data);
+                resolve(data);
+            } catch (error) {
+                reject(error);
+            }
         });
     }
 }
