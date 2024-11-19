@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { URLSearchParams, URL } from "url";
+import { URLSearchParams } from "url";
 
 import { WhmcsSetupOptions } from "../interface/whmcs.setup.options";
 
