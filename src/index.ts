@@ -1,4 +1,4 @@
-import { WhmcsSetupOptions } from "./interface/whmcs.setup.options";
+import type { WhmcsSetupOptions } from "./interface/whmcs.setup.options";
 import { WhmcsAddonsService } from "./module/addons";
 import { WhmcsAffiliatesService } from "./module/affiliates";
 import { WhmcsAuthenticationService } from "./module/authentication";
@@ -16,7 +16,7 @@ import { WhmcsSystemService } from "./module/system";
 import { WhmcsTicketsService } from "./module/tickets";
 import { WhmcsUsersService } from "./module/users";
 
-export default class WhmcsApi {
+class WhmcsApi {
     public addons: WhmcsAddonsService;
     public affiliates: WhmcsAffiliatesService;
     public authentication: WhmcsAuthenticationService;
@@ -55,3 +55,5 @@ export default class WhmcsApi {
         this.users = new WhmcsUsersService(this.options);
     }
 }
+
+export default WhmcsApi;
