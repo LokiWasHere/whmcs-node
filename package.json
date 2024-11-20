@@ -4,6 +4,7 @@
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "type": "module",
     "scripts": {
         "build": "npx tsc",
         "publish-npm": "npm run build && npm version patch && npm publish"
@@ -32,6 +33,9 @@
     },
     "homepage": "https://github.com/shockbyte/whmcs-node#readme",
     "dependencies": {
-        "got": "^11.8.0"
+        "got": "^14.4.4"
+    },
+    "devDependencies": {
+        "@types/node": "^22.9.1"
     }
 }
